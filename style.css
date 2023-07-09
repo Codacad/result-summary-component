@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;800&family=Roboto:wght@700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Component */
+
+div.component{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: 0px 20px 20px rgba(0,0,0,.1), 0px 0px 20px rgba(0,0,0,.1);
+}
+
+/* Result inside component */
+div.result{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family:'Hanken Grotesk', sans-serif;
+}
+div.result-contents{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 10%;
+  height: 100%;
+  color: #fff;
+  border-radius: 20px;
+  background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+div.result-contents h1{
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  opacity: .8;
+  margin-top: 20px;
+}
+
+div.result-contents .score{
+  width: 150px;
+  height: 150px;
+  margin: 30px auto 0 auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to top, hsla(241, 72%, 46%, 0), hsla(256, 72%, 46%, 1));
+}
+div.result-contents .score span:nth-child(1){
+  font-size: 46px;
+}
+div.result-contents .score span:nth-child(2){
+  font-size: 14px;
+  opacity: .7;
+}
+div.result-contents .appreciation{
+  margin-bottom: 0px
+}
+div.result-contents .appreciation h1{
+  opacity: 1;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+div.result-contents .appreciation p{
+  font-size: 14px;
+  padding: 0 10%;
+  opacity: .7;
+}
+
+/* Summary Inside Component */
+div.summary{
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+div.summary h1{
+  font-size: 20px;
+}
+.summary-elements{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.element{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  align-items: center;
+  padding: 12px;
+  font-weight: 500;
+}
+.element .element-content{
+  display: flex;
+  font-size: 14px;
+}
+.element-numbers{
+  justify-self: flex-end;
+  font-size: 14px;
+  font-weight: 600;
+}
+.element .element-content img{
+  margin-right: 10px;
+}
+.element-one{
+  background-color:  rgb(255, 87, 87, .1);
+}
+.reaction{
+  color: rgb(255, 87, 87);
+}
+.element-two{
+  background-color: rgb(255, 176, 31, .1);
+}
+.memory{
+  color: rgb(255, 176, 31);
+}
+.element-three{
+  background-color: rgb(0, 189, 145, .1);
+}
+.verbal{
+  color: rgb(0, 189, 145);
+}
+.element-four{
+  background-color: rgb(17, 37, 212, .1);
+}
+.visual{
+  color: rgb(17, 37, 212);
+}
+
+div.summary button{
+  display: block;
+  width: 100%;
+  padding: .8em;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 700;
+  background-color:  hsl(224, 30%, 27%);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+div.summary button:active{
+  background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+.attribution{
+  padding: 20px 0;
+  font-size: 14px;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+@media(max-width:980px){
+  div.component{
+    width: 90%;
+  }
+}
+@media(max-width:640px){
+  body{
+    padding: 0;
+  }
+  div.component{
+    width: 100%;
+    display: block;
+  }
+  div.result-contents{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 10% 10%;
+  }
+  div.result-contents h1{
+    margin-top: 0;
+  }
+  div.result-contents .appreciation h1{
+    opacity: 1;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  div.result-contents .appreciation p{
+    font-size: 14px;
+    padding: 0 10%;
+    opacity: .7;
+  }
+  div.summary{
+    padding: 5%;
+  }
+  div.summary h1{
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
